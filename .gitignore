@@ -218,3 +218,23 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Environment files (keep the example)
+.env.*
+!.env.example
+
+# Node / web
+node_modules/
+.next/
+.vite/
+coverage/
+
+# Local data and indexes
+*.duckdb
+*.duckdb.wal
+.chroma/
+
+# IDE / OS
+.idea/
+.vscode/
+.DS_Store
