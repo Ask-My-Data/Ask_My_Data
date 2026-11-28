@@ -2,9 +2,7 @@ import typer
 
 from askmydata import __version__
 
-app = typer.Typer(
-    help="AskMyData : interrogez vos données en langage naturel.", no_args_is_help=True
-)
+app = typer.Typer(help="AskMyData: query your data in natural language.", no_args_is_help=True)
 
 
 @app.callback()
@@ -14,5 +12,5 @@ def main() -> None:
 
 @app.command()
 def version() -> None:
-    """Affiche la version installée d'AskMyData."""
+    """Show the installed AskMyData version."""
     typer.echo(f"askmydata {__version__}")

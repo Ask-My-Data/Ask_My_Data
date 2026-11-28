@@ -1,5 +1,7 @@
 # Ask My Data
 
+[![CI](https://github.com/Ask-My-Data/Ask_My_Data/actions/workflows/ci.yml/badge.svg)](https://github.com/Ask-My-Data/Ask_My_Data/actions/workflows/ci.yml)
+
 Multi-agent engine to query structured data (PostgreSQL, CSV) in natural language, with traceable answers: executed SQL, sources and agent steps.
 
 ## Requirements
@@ -10,7 +12,7 @@ Multi-agent engine to query structured data (PostgreSQL, CSV) in natural languag
 ## Installation
 
 ```bash
-git clone git@github.com:AdamEtDev/Ask_My_Data.git
+git clone git@github.com:Ask-My-Data/Ask_My_Data.git
 cd Ask_My_Data
 uv sync
 uv run pre-commit install
@@ -28,6 +30,8 @@ uv run askmydata --help
 | All hooks | `uv run pre-commit run --all-files` |
 
 Pre-commit hooks automatically run lint, formatting and type checking on every commit.
+
+The CI pipeline (`.github/workflows/ci.yml`) runs on every pull request to `main`: lint, format check, type check, tests and dependency vulnerability audit. A pull request cannot be merged until it passes.
 
 Add a dependency: `uv add <package>` (or `uv add --dev <package>` for a development tool). The `uv.lock` file is committed.
 
